@@ -235,3 +235,72 @@ This continuous execution forms a supervisory closed-loop control system in whic
 | Temp_Error_R1 – Temp_Error_R6 | Temperature Error |
 | Rate_R1 – Rate_R6 | Temperature Rate of Rise |
 | FCV_Open_% | Intermediate FCV command before output |
+
+## Values Assigned
+
+| Parameter | Value | Purpose |
+| --- | --- | --- |
+| Rack Temperature Setpoint | **27°C** | Normal operating target |
+| Cooling Increase Band | **28–32°C** | Increase cooling proportionally |
+| High Temperature Alarm | **35°C** | Warn operator, maximize cooling |
+| High Temperature Trip | **40°C** | Safety trip / emergency shutdown |
+
+| PLC Tag | Description | Unit | Typical Range | Purpose |
+| --- | --- | --- | --- | --- |
+| AI_R1_Load | Rack 1 IT Load | % | 0–100% | Feedforward |
+| AI_R2_Load | Rack 2 IT Load | % | 0–100% | Feedforward |
+| AI_R3_Load | Rack 3 IT Load | % | 0–100% | Feedforward |
+| AI_R4_Load | Rack 4 IT Load | % | 0–100% | Feedforward |
+| AI_R5_Load | Rack 5 IT Load | % | 0–100% | Feedforward |
+| AI_R6_Load | Rack 6 IT Load | % | 0–100% | Feedforward |
+| AI_R1_Temp | Rack 1 Outlet Temperature | °C | 20–45°C | Feedback |
+| AI_R2_Temp | Rack 2 Outlet Temperature | °C | 20–45°C | Feedback |
+| AI_R3_Temp | Rack 3 Outlet Temperature | °C | 20–45°C | Feedback |
+| AI_R4_Temp | Rack 4 Outlet Temperature | °C | 20–45°C | Feedback |
+| AI_R5_Temp | Rack 5 Outlet Temperature | °C | 20–45°C | Feedback |
+| AI_R6_Temp | Rack 6 Outlet Temperature | °C | 20–45°C | Feedback |
+| AI_Hot_Aisle_Temp | Hot Aisle Temperature | °C | 25–45°C | CRAH Control |
+| AI_Cold_Aisle_Temp | Cold Aisle Temperature | °C | 18–30°C | CRAH Control |
+| AI_Coolant_Flow | CDU Coolant Flow Rate | L/min | 20–200 L/min | CDU Control |
+| AI_Coolant_Pressure | CDU Supply Pressure | bar | 1–5 bar | Pump Monitoring |
+| AI_Coolant_Supply_Temp | Coolant Supply Temperature | °C | 18–30°C | Cooling Performance |
+| AI_Coolant_Return_Temp | Coolant Return Temperature | °C | 22–40°C | Heat Load Calculation |
+
+| Parameter | Setpoint |
+| --- | --- |
+| Rack Temperature | **27°C** |
+| Hot Aisle Temperature | **35°C** |
+| Cold Aisle Temperature | **22°C** |
+| Coolant Supply Temperature | **20°C** |
+| Minimum Coolant Flow | **40 L/min** |
+| Coolant Pressure | **2.5 bar** |
+
+| Analog Input | Initial Value | Unit |
+| --- | --- | --- |
+| Rack 1 Load | 35 | % |
+| Rack 2 Load | 60 | % |
+| Rack 3 Load | 80 | % |
+| Rack 4 Load | 45 | % |
+| Rack 5 Load | 95 | % |
+| Rack 6 Load | 25 | % |
+| Rack 1 Temperature | 27 | °C |
+| Rack 2 Temperature | 29 | °C |
+| Rack 3 Temperature | 32 | °C |
+| Rack 4 Temperature | 28 | °C |
+| Rack 5 Temperature | 35 | °C |
+| Rack 6 Temperature | 26 | °C |
+| Cold Aisle Temperature | 22 | °C |
+| Hot Aisle Temperature | 35 | °C |
+| Coolant Flow | 100 | L/min |
+| Coolant Pressure | 2.5 | bar |
+| Coolant Supply Temperature | 20 | °C |
+| Coolant Return Temperature | 28 | °C |
+
+| Rack | Current Temp Input (AI) | Previous Temp Memory | Calculated Rate |
+| --- | --- | --- | --- |
+| Rack 1 | 27°C | 26.5°C | +0.5°C/s |
+| Rack 2 | 29°C | 28.2°C | +0.8°C/s |
+| Rack 3 | 32°C | 31°C | +1°C/s |
+| Rack 4 | 28°C | 27.7°C | +0.3°C/s |
+| Rack 5 | 35°C | 33.5°C | +1.5°C/s |
+| Rack 6 | 26°C | 25.8°C | +0.2°C/s |
