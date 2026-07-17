@@ -16,3 +16,36 @@ To develop a PLC-based feed-forward liquid cooling control system that optimizes
 
 ### Demonstration Video
 - [Ladder_Logic_Simulation.mp4](Ladder_Logic_Simulation.mp4)
+
+### Control Phillosphy 
+- [Working.md](Working.md)
+
+## Features
+
+- Feed-forward cooling demand calculation
+- Cooling Demand Index (CDI) based control
+- Multi-rack thermal monitoring (6 server racks)
+- Rack-wise Flow Control Valve (FCV) control
+- Highest-demand (Max CDI) pump control
+- Staged cooling response (30%, 60%, 100%)
+- Temperature rate-of-rise prediction
+- Safety permissives and fault interlocks
+- Continuous supervisory cooling control
+- CDU pump speed optimization
+
+## PLC Instructions Used
+
+- XIC (Examine If Closed)
+- XIO (Examine If Open)
+- OTE (Output Energize)
+- MOV (Move)
+- ADD
+- SUB
+- MUL
+- DIV
+- LIM (Limit)
+- GEQ / LEQ / GRT (Compare Instructions)
+
+### Note
+
+A PID controller was not implemented because the PLC development environment did not provide a built-in PID instruction. A staged feed-forward control strategy using CDI and compare logic was implemented instead.
