@@ -1,1 +1,1 @@
-# Intelligent-Feed-Forward-Feedback-Liquid-Cooling-Control-Using-PLC-for-High-Density-Server-Racks
+# Intelligent-Feed-Forward-Liquid-Cooling-Control-Using-PLC-for-High-Density-Server-Racks
