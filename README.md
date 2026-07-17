@@ -15,5 +15,4 @@ To develop a PLC-based feed-forward liquid cooling control system that optimizes
 
 
 ### Demonstration Video
-
-* 
+- [Ladder_Logic_Simulation.mp4](Ladder_Logic_Simulation.mp4)
